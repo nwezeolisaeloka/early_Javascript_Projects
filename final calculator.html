@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet"
+    href="styles/final calculator.css">
+</head>
+<body>
+   
+        <div class="divproperty">
+
+           <p id="result" style="text-align: center; font-size: 24px; border: 1px solid black; padding: 10px;">0</p>
+    <table style="margin: auto;">
+        <tr>
+            <td><button class="black" onclick="addToScreen('1')">1</button></td>
+            <td><button class="black" onclick="addToScreen('2')">2</button></td>
+            <td><button class="black" onclick="addToScreen('3')">3</button></td>
+            <td><button class="yellow" onclick ="addToScreen('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="black" onclick="addToScreen('4')">4</button></td>
+            <td><button class="black" onclick="addToScreen('5')">5</button></td>
+            <td><button class="black" onclick="addToScreen('6')">6</button></td>
+            <td><button class="yellow" onclick="addToScreen('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="black" onclick="addToScreen('7')">7</button></td>
+            <td><button class="black" onclick="addToScreen('8')">8</button></td>
+            <td><button class="black" onclick="addToScreen('9')">9</button></td>
+            <td><button class="yellow" onclick="addToScreen('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button class="black" onclick="addToScreen('0')">0</button></td>
+            <td><button class="black" onclick="addToScreen('.')">.</button></td>
+            <td><button class="black" onclick="addToScreen('/')">/</button></td>
+            <td><button class="yellow" onclick="calculateResult()">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="4"><button class="black" onclick="clearScreen()">Clr</button></td>
+        </tr>
+      </table>
+
+        </div>
+    
+
+    <script>
+        let screen = document.getElementById("result");
+
+        function addToScreen(value) {
+            screen.textContent += value;
+        }
+
+        function clearScreen() {
+            screen.textContent = '';
+        }
+
+        function calculateResult() {
+            let result;
+            try {
+                result = eval(screen.textContent);
+            } catch (error) {
+                result = 'Error';
+            }
+            screen.textContent = result;
+        }
+    </script>
+</body>
+</html>
