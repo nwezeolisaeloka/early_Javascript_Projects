@@ -1,0 +1,40 @@
+.black{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.384);
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.yellow{
+  color: white;
+  background-color: rgb(221, 156, 15);
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+
+}
+
+.divproperty{
+  width: 280px; /* Adjust the width according to your needs */
+  height: 600px; /* Adjust the height according to your needs */
+  background-color: #130f0f;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0cap;
+  text-align: center;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;}
